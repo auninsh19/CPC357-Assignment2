@@ -1,1 +1,3 @@
 # CPC357-Assignment2
+
+This assignment aims to design and develop an IoT application focused on agricultural settings particularly paddy fields; monitoring environmental conditions like soil moisture, temperature, humidity, rainfall and overall weather conditions. These data can be analyzed to optimize irrigation, improve crop yield and ensure sustainable farming practices. For system development, we utilize Google Cloud Platforms (GCP) to facilitate data processing, storage and analysis. This is also one of the opportunities to learn on how to effectively utilize the platform and explore its functionalities, including MQTT for data transmission and MongoDB for data storage.
