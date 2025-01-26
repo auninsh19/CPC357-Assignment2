@@ -1,11 +1,11 @@
 # CPC357 Assignment 2 - Smart Agriculture IoT Application
 
-This project implements a Smart Agriculture IoT application that collects data from an MQTT broker and stores it in a MongoDB database. The application is designed to monitor paddy fields and facilitate data-driven decision-making in agriculture.
+This project implements a Smart Agriculture IoT application that collects data from an MQTT broker and stores it in a MongoDB database. The application is designed to monitor paddy fields and facilitate data-driven decision-making in agriculture. This project does not require hardware connectivity as the data comes from an already available dataset.
 
 ## Features
 
 - Connects to an MQTT broker to receive real-time data.
-- Ingests data into a MongoDB database with a UTC timestamp.
+- Ingests data into a MongoDB database.
 - Handles incoming messages and processes them for storage.
 
 ## Prerequisites
