@@ -14,8 +14,8 @@ Before setting up the development environment on a GCP VM instance, ensure you h
 
 - A Google Cloud account
 - A GCP Virtual Machine instance running a supported OS (e.g., Ubuntu)
-- MongoDB installed on the VM or access to a MongoDB Atlas instance
-- An MQTT Broker (e.g., Mosquitto) installed on the VM or access to a public MQTT broker
+- MongoDB installed on the VM
+- An MQTT Broker (Mosquitto) installed on the VM or access to a public MQTT broker
 - Python 3.x installed on the VM
 - pip (Python package installer)
 
@@ -37,7 +37,51 @@ Before setting up the development environment on a GCP VM instance, ensure you h
    Update the package list and install necessary packages:
    ```bash
    sudo apt-get update
-   
    sudo apt-get upgrade
- 
-   sudo apt install python3 python3-pip mongodb mosquitto
+   sudo apt-get install python3 python3-pip mongodb mosquitto
+
+4. **Clone the Repository**
+
+   Clone this repository to your VM instance using the following command:
+   ```bash
+   git clone https://github.com/yourusername/smart-agriculture.git
+   cd smart-agriculture
+
+5. **Install Required Python Packages**
+
+   Install the required Python packages using pip:
+   ```bash
+   pip install pymongo paho-mqtt
+
+6. **Set Up MongoDB**
+
+   Ensure that MongoDB is running on your VM. You can start it with:
+   ```bash
+   sudo service mongodb start
+
+Create a database named smart_agriculture and a collection named paddy if they do not already exist.
+
+7. **Set Up MQTT Broker**
+
+   If you are using Mosquitto, ensure it is running. You can start it with:
+
+   ```bash
+   sudo service mosquitto start bash```
+
+   Update the mqtt_broker_address in the source code to point to your MQTT broker.
+
+8. **Run the Application**
+
+   Execute the Python script to start the application:
+   ```bash
+   python3 your_script_name.py```
+
+   Replace your_script_name.py with the actual name of your Python file.
+
+9. **Data Ingestion**
+
+   The application will listen for messages on the specified MQTT topic (smart_agriculture) and ingest the data into the MongoDB collection.
+
+##Dataset
+
+The dataset used for this project is located in the data1.csv file in this repository. This dataset can be used for testing and simulating data ingestion.
