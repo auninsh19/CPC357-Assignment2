@@ -13,7 +13,7 @@ This project implements a Smart Agriculture IoT application that collects data f
 Before setting up the development environment on a GCP VM instance, ensure you have the following:
 
 - A Google Cloud account
-- A GCP Virtual Machine instance running a supported OS (e.g., Ubuntu)
+- A GCP Virtual Machine instance running a supported OS (Ubuntu)
 - MongoDB installed on the VM
 - An MQTT Broker (Mosquitto) installed on the VM or access to a public MQTT broker
 - Python 3.x installed on the VM
