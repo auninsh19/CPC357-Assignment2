@@ -36,8 +36,8 @@ Before setting up the development environment on a GCP VM instance, ensure you h
 
    Update the package list and install necessary packages:
    ```bash
-   sudo apt-get update```
-   ```bash
+   sudo apt-get update
+   
    sudo apt-get upgrade
-   ```bash
+ 
    sudo apt install python3 python3-pip mongodb mosquitto
