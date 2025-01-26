@@ -66,8 +66,8 @@ Create a database named smart_agriculture and a collection named paddy if they d
    If you are using Mosquitto, ensure it is running. You can start it with:
 
    ```bash
-   sudo service mosquitto start bash```
-
+   sudo service mosquitto start bash
+   ```
    Update the mqtt_broker_address in the source code to point to your MQTT broker.
 
 8. **Run the Application**
@@ -82,6 +82,6 @@ Create a database named smart_agriculture and a collection named paddy if they d
 
    The application will listen for messages on the specified MQTT topic (smart_agriculture) and ingest the data into the MongoDB collection.
 
-##Dataset
+## Dataset
 
 The dataset used for this project is located in the data1.csv file in this repository. This dataset can be used for testing and simulating data ingestion.
