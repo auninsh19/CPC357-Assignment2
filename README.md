@@ -37,15 +37,23 @@ Before setting up the development environment on a GCP VM instance, ensure you h
    Update the package list and install necessary packages:
    ```bash
    sudo apt-get update
+   ```
+   ```bash
    sudo apt-get upgrade
+   ```
+   ```bash
    sudo apt-get install python3 python3-pip mongodb mosquitto
+   ```
 
 4. **Clone the Repository**
 
    Clone this repository to your VM instance using the following command:
    ```bash
    git clone https://github.com/yourusername/smart-agriculture.git
+   ```
+   ```bash
    cd smart-agriculture
+   ```
 
 5. **Install Required Python Packages**
 
@@ -58,15 +66,25 @@ Before setting up the development environment on a GCP VM instance, ensure you h
    Ensure that MongoDB is running on your VM. You can start it with:
    ```bash
    sudo service mongodb start
-
-Create a database named smart_agriculture and a collection named paddy if they do not already exist.
+   ```
+   Create a database named smart_agriculture and a collection named paddy if they do not already exist. You can do this by accessing the MongoDB shell:
+   ```bash
+   mongo
+   ```
+   Then, in the MongoDB shell, run:
+   ```javascript
+   use smart_agriculture
+   db.createCollection("paddy")
+   exit
+   ```
+   Create a database named smart_agriculture and a collection named paddy if they do not already exist.
 
 7. **Set Up MQTT Broker**
 
    If you are using Mosquitto, ensure it is running. You can start it with:
 
    ```bash
-   sudo service mosquitto start bash
+   sudo service mosquitto start
    ```
    Update the mqtt_broker_address in the source code to point to your MQTT broker.
 
@@ -74,8 +92,8 @@ Create a database named smart_agriculture and a collection named paddy if they d
 
    Execute the Python script to start the application:
    ```bash
-   python3 your_script_name.py```
-
+   python3 your_script_name.py
+   ```
    Replace your_script_name.py with the actual name of your Python file.
 
 9. **Data Ingestion**
